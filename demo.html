@@ -1,0 +1,667 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>学成在线教育平台-不是每个网站都叫学成在线</title>
+	<link rel="shortcut icon" href="favicon.ico" />
+	<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		background-color: #f3f5f7;
+	}
+	.header {
+		width: 100%;
+		height: 150px;
+		padding: 54px 80px;
+		box-sizing: border-box;
+		display: flex;
+		justify-content: space-between;
+	}
+	.logo {
+		width: 195px;
+		background-color: red;
+	}
+	.nav {
+		width: 200px;
+	}
+	.nav ul {
+		list-style: none;
+		width: 200px;
+		height: 42px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.nav li {
+		font-size: 17px;
+		height: 42px;
+		line-height: 42px;
+	}
+	.nav a {
+		color: black;
+		text-decoration: none;
+	}
+	.nav a:hover {
+		color: #c81623;
+		text-decoration: underline;
+	}
+	.search {
+		width: 400px;
+		line-height: 42px;
+		background-color: red;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.search input {
+		height: 100%;
+		width: 350px;
+		border: 1px solid #00a4ff;
+		padding-left: 10px;
+		box-sizing: border-box;
+		font-size: 15px;
+		outline: none;
+	}
+	.search button {
+		width: 50px;
+		height: 100%;
+		background-image: url(images/fa-search.png);
+		outline: none;
+		border: 0;
+	}
+	.person {
+		width: 300px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+	.person span {
+		display: inline-block;
+		height: 42px;
+		line-height: 42px;
+		font-size: 12px;
+		color: #ccc;
+	}
+	.person img {
+		border-radius: 50%;
+		display: block;
+	}
+	.imgone {
+		margin-top: 15px;
+	}
+	.imgtwo {
+		margin-top: 8px;
+	}
+	.banner {
+		width: 100%;
+		height: 420px;
+		background-color: #1c036c;
+	}
+	.php {
+		position: relative;
+		width: 80%;
+		height: 420px;
+		margin: 0 auto;
+		background-image: url(images/banner.jpg);
+	}
+	.subnav {
+		position: absolute;
+		width: 15%;
+		height: 420px;
+		background: rgba(0, 0, 0, .3);
+		left: 0;
+	}
+	.subnav ul{
+		width: 100%;
+		height: 420px;
+		list-style: none;
+	}
+	.subnav li {
+		width: 100%;
+		height: 42px;
+		line-height: 42px;
+		text-align: center;
+	}
+	.subnav a {
+		color: white;
+		font-size: 15px;
+		text-decoration: none;
+	}
+	.subnav a:hover {
+		color: blue;
+	}
+	.subnav span{
+		margin-left: 65px;
+	}
+	.circle {
+		position: absolute;
+		width: 15%;
+		height: 25px;
+		bottom: 40px;
+		left: 480px;
+	}
+	.circle ul {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+		width: 100%;
+		height: 25px;
+		list-style: none;
+	}
+	.circle li {
+		width: 13%;
+		height: 25px;
+		background-color: rgba(255, 255, 255, 0.4);
+		border-radius: 50%;
+	}
+	.circle li:hover {
+	width: 17%;
+	background-color: #fff;
+    }
+    .timebook {
+    	position: absolute;
+    	width: 20%;
+    	height: 300px;
+    	right: 0;
+    	top: 50%;
+    	transform: translateY(-50%);
+    	background-color: white;
+    }
+    .timebook dl {
+    	width: 100%;
+    	height: 270px;
+    }
+    .timebook dt {
+    	width: 100%;
+    	height: 60px;
+    	text-align: center;
+    	line-height: 60px;
+    	color: white;
+    	background-color: #9bceea;
+    	font-weight: 700;
+    	font-size: 18px;
+    }
+    .timebook dd {
+    	width: 100%;
+    	height: 230px;
+    	padding: 30px 20px 0;
+    	box-sizing: border-box;
+    }
+    .timebook ul {
+    	width: 100%;
+    	height: 150px;
+    	list-style: none;
+    	display: flex;
+    	flex-direction: column;
+    	justify-content: space-between;
+    }
+    .timebook li {
+    	display: block;
+    	width: 100%;
+    	height: 50px;
+    	border-bottom: 1px solid #e5e5e5;
+    	padding-top: 5px;
+    }
+    .timebook dd li:last-child {
+	border: 0;
+    }
+    .timebook h5 {
+    	color: #666666;
+    	font-size: 16px;
+    }
+    .timebook p {
+    	color: #666666;
+    	font-size: 13px;
+    }
+    .timebook a {
+    	display: block;
+    	width: 100%;
+    	height: 50px;
+    	border: 1px solid #90d7ff;
+    	line-height: 50px;
+    	text-align: center;
+    	color: #90d7ff;
+    	text-decoration: none;
+    }
+    .timebook a:hover {
+    	background-color: #90d7ff;
+    	color: white;
+    }
+    .recommand {
+    	width: 1200px;
+    	height: 60px;
+    	line-height: 60px;
+    	box-shadow: 0px 1px 12px rgba(0, 0, 0, .4);
+    	margin: 10px auto 0;
+    	position: relative;
+    }
+    .rec-l {
+    	width: 900px;
+    	height: 60px;
+    	margin-left: 30px;
+    	display: flex;
+    	flex-direction: row;
+    	justify-content: space-around;
+    	text-align: center;
+    	color: #666666;
+    }
+    .rec-l p {
+    	color: red;
+    	font-weight: bold;
+    	color: #22b0ff;
+    }
+    .rec-l a {
+    	color: #050505;
+    	text-decoration: none;
+    }
+    .rec-l a:hover {
+    	color: #c81623;
+    }
+    .recommand em {
+    	position: absolute;
+    	right: 20px;
+    	bottom: 0;
+    	font-size: 12px;
+    	color: #666666;
+    }
+    .products {
+    	width: 1200px;
+    	height: 650px;
+    	margin: 40px auto 0;
+    }
+    .pro-hd {
+    	width: 1200px;
+    	height: 40px;
+    	display: flex;
+    	flex-direction: row;
+    	justify-content: space-between;
+    }
+    .pro-hd h4 {
+    	color: #737674;
+    	font-size: 20px;
+    	font-weight: normal;
+    }
+    .pro-hd a {
+    	color: #050505;
+    	font-size: 13px;
+    	text-decoration: none;
+    }
+    .pro-hd a:hover {
+    	color: #c81623;
+    }
+    .pro-bd {
+    	width: 1200px;
+    	height: 610px;
+    	display: flex;
+    	justify-content: space-between;
+    	flex-wrap: wrap;
+    }
+    .box {
+    	width: 228px;
+    	height: 270px;
+    	background-color: white;
+    	transition: all 0.4s;
+    }
+    .box:hover {
+    	box-shadow: 2px 2px 10px rgba(0, 0, 0, .3);
+    	transform: translateY(-10px);
+    }
+    .pic {
+    	width: 228px;
+    	height: 155px;
+    }
+    .pic img {
+    	width: 100%;
+    }
+    .pro-title {
+    	width: 228px;
+    	height: 70px;
+    	padding: 10px 20px 0;
+    	box-sizing: border-box;
+    	color: #050505;
+    }
+    .study {
+    	height: 45px;
+    	width: 228px;
+    	line-height: 45px;
+    	display: flex;
+    	flex-direction: row;
+    	font-size: 11px;
+    }
+    .study span {
+    	color: #ff7c2d;
+    	margin-left: 20px;
+    	margin-right: 5px;
+    }
+    /.study p {
+    	color: #999;
+    }
+    .footer {
+    	width: 100%;
+    	height: 420px;
+    	background-color: white;
+    	position: relative;
+    }
+    .footer-l {
+    	width: 432px;
+    	height: 165px;
+    	position: absolute;
+    	top: 40px;
+    	left: 190px;
+    }
+    .footer-l p {
+    	width: 432px;
+    	height: 48px;
+    	margin: 20px 0;
+    	color: #666666;
+    	font-size: 12px;
+    	line-height: 24px;
+    }
+    .footer-l a {
+    	display: block;
+    	width: 120px;
+    	height: 35px;
+    	border: 1px solid #22b0ff;
+    	line-height: 35px;
+    	text-align: center;
+    	color: #22b0ff;
+    	font-size: 14px;
+    	text-decoration: none;
+    }
+    .footer-r {
+    	width: 600px;
+    	height: 130px;
+    	position: absolute;
+    	top: 40px;
+    	right: 190px;
+    	display: flex;
+    	flex-direction: row;
+    }
+    .footer-r dl {
+    	margin-left: 130px;
+    	width: 70px;
+    	height: 130px;
+    }
+    .footer-r dt {
+    	font-size: 14px;
+    	color: #333333;
+    	height: 30px;
+    }
+    .footer-r dd {
+    	color: #666666;
+    	height: 20px;
+    	font-size: 12px;
+    }
+    </style>
+</head>
+<body>
+	<!--头部-->
+	<div class="header">
+		<!--logo-->
+		<div class="logo">
+			<img src="images/logo.jpg"/>
+		</div>
+		<!--导航栏-->
+		<div class="nav">
+			<ul>
+				<li>
+					<a href="#">首页</a>
+				</li>
+				<li>
+					<a href="#">课程</a>
+				</li>
+				<li>
+					<a href="#">职业规划</a>
+				</li>
+			</ul>
+		</div>
+		<!--搜索栏-->
+		<div class="search">
+			<input type="search" name="" id="" placeholder="请输入关键字"/><button></button>
+		</div>
+		<!--个人中心-->
+		<div class="person">
+			<span>个人中心</span>
+			<span><img  class="imgone" src="images/id.png"/></span>
+			<span><img class="imgtwo" src="images/pic.png"/></span>
+			<span>刘德华 andy</span>
+		</div>
+	</div>
+	<!--主要部分-->
+	<div class="banner">
+		<div class="php">
+			<!--侧边栏-->
+			<div class="subnav">
+				<ul>
+					<li><a href="#">前端开发  <span> > </span></a></li>
+				 	<li><a href="#">前端开发  <span> > </span></a></li>
+				 	<li><a href="#">前端开发  <span> > </span></a></li>
+				 	<li><a href="#">前端开发  <span> > </span></a></li>
+				 	<li><a href="#">前端开发  <span> > </span></a></li>
+				 	<li><a href="#">前端开发  <span> > </span></a></li>
+				 	<li><a href="#">前端开发  <span> > </span></a></li>
+				 	<li><a href="#">前端开发  <span> > </span></a></li>
+				 	<li><a href="#">前端开发  <span> > </span></a></li>
+				 	<li><a href="#">前端开发  <span> > </span></a></li>
+				</ul>
+			</div>
+			<!--小圆点-->
+			<div class="circle">
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<div class="timebook">
+				<dl>
+					<dt>我的课程表</dt>
+					<dd>
+						<ul>
+							<li>
+								<h5>继续学习 程序语言设计</h5>
+								<p>正在学习-使用对象</p>
+							</li>
+							<li>
+								<h5>继续学习 程序语言设计</h5>
+								<p>正在学习-使用对象</p>
+							</li>
+							<li>
+								<h5>继续学习 程序语言设计</h5>
+								<p>正在学习-使用对象</p>
+							</li>
+						</ul>
+						<a href="#">全部课程</a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+	<!--精品推荐-->
+	<div class="recommand">
+		<div class="rec-l">
+			<p>精品推荐</p>|
+			<a href="#">jQuery</a>|
+			<a href="#">jQuery</a>|
+			<a href="#">jQuery</a>|
+			<a href="#">jQuery</a>|
+			<a href="#">jQuery</a>|
+			<a href="#">jQuery</a>|
+			<a href="#">jQuery</a>|
+			<a href="#">jQuery</a>|
+			<a href="#">jQuery</a>|
+			<a href="#">jQuery</a>|
+		</div>
+		<em>修改兴趣</em>
+	</div>
+	<!--精品产品-->
+	<div class="products">
+		<div class="pro-hd">
+			<h4>精品推荐</h4>
+			<a href="#">查看全部</a>
+		</div>
+		<div class="pro-bd">
+			<div class="box">
+				<div class="pic">
+					<img src="images/picpic.png"/>
+				</div>
+				<div class="pro-title">
+					Think PHP 5.0 博客系统实战项目演练
+				</div>
+				<div class="study">
+					<span>高级</span>
+					<p>• 1125人在学习</p>
+				</div>
+			</div>
+			<div class="box">
+				<div class="pic">
+					<img src="images/picpic.png"/>
+				</div>
+				<div class="pro-title">
+					Think PHP 5.0 博客系统实战项目演练
+				</div>
+				<div class="study">
+					<span>高级</span>
+					<p>• 1125人在学习</p>
+				</div>
+			</div>
+			<div class="box">
+				<div class="pic">
+					<img src="images/picpic.png"/>
+				</div>
+				<div class="pro-title">
+					Think PHP 5.0 博客系统实战项目演练
+				</div>
+				<div class="study">
+					<span>高级</span>
+					<p>• 1125人在学习</p>
+				</div>
+			</div>
+			<div class="box">
+				<div class="pic">
+					<img src="images/picpic.png"/>
+				</div>
+				<div class="pro-title">
+					Think PHP 5.0 博客系统实战项目演练
+				</div>
+				<div class="study">
+					<span>高级</span>
+					<p>• 1125人在学习</p>
+				</div>
+			</div>
+			<div class="box">
+				<div class="pic">
+					<img src="images/picpic.png"/>
+				</div>
+				<div class="pro-title">
+					Think PHP 5.0 博客系统实战项目演练
+				</div>
+				<div class="study">
+					<span>高级</span>
+					<p>• 1125人在学习</p>
+				</div>
+			</div>
+			<div class="box">
+				<div class="pic">
+					<img src="images/picpic.png"/>
+				</div>
+				<div class="pro-title">
+					Think PHP 5.0 博客系统实战项目演练
+				</div>
+				<div class="study">
+					<span>高级</span>
+					<p>• 1125人在学习</p>
+				</div>
+			</div>
+			<div class="box">
+				<div class="pic">
+					<img src="images/picpic.png"/>
+				</div>
+				<div class="pro-title">
+					Think PHP 5.0 博客系统实战项目演练
+				</div>
+				<div class="study">
+					<span>高级</span>
+					<p>• 1125人在学习</p>
+				</div>
+			</div>
+			<div class="box">
+				<div class="pic">
+					<img src="images/picpic.png"/>
+				</div>
+				<div class="pro-title">
+					Think PHP 5.0 博客系统实战项目演练
+				</div>
+				<div class="study">
+					<span>高级</span>
+					<p>• 1125人在学习</p>
+				</div>
+			</div>
+			<div class="box">
+				<div class="pic">
+					<img src="images/picpic.png"/>
+				</div>
+				<div class="pro-title">
+					Think PHP 5.0 博客系统实战项目演练
+				</div>
+				<div class="study">
+					<span>高级</span>
+					<p>• 1125人在学习</p>
+				</div>
+			</div>
+			<div class="box">
+				<div class="pic">
+					<img src="images/picpic.png"/>
+				</div>
+				<div class="pro-title">
+					Think PHP 5.0 博客系统实战项目演练
+				</div>
+				<div class="study">
+					<span>高级</span>
+					<p>• 1125人在学习</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--尾部-->
+	<div class="footer">
+		<div class="footer-l">
+			<img src="images/logo.png"/>
+			<p>学成在线致力于普及中国最好的教育它与中国一流大学和机构合作提供在线课程。© 2017年XTCG Inc.保留所有权利。-沪ICP备15025210号</p>
+			<a href="#">下载APP</a>
+		</div>
+		<div class="footer-r">
+			<dl>
+				<dt>关于学成网</dt>
+     	 		<dd>关于</dd>
+     	 		<dd>管理团队</dd>
+     	 		<dd>工作机会</dd>
+     	 		<dd>客户服务</dd>
+     	 		<dd>帮助</dd>
+			</dl>
+			<dl>
+				<dt>关于学成网</dt>
+     	 		<dd>关于</dd>
+     	 		<dd>管理团队</dd>
+     	 		<dd>工作机会</dd>
+     	 		<dd>客户服务</dd>
+     	 		<dd>帮助</dd>
+			</dl>
+			<dl>
+				<dt>关于学成网</dt>
+     	 		<dd>关于</dd>
+     	 		<dd>管理团队</dd>
+     	 		<dd>工作机会</dd>
+     	 		<dd>客户服务</dd>
+     	 		<dd>帮助</dd>
+			</dl>
+		</div>
+	</div>
+</body>
+</html>
